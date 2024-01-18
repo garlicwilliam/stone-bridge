@@ -1,0 +1,43 @@
+@import 'css/font.css';
+@import 'css/var';
+@import 'css/font-family';
+@import 'css/ant';
+@import 'css/btn';
+@import 'css/sld';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #000;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: Montserrat-Regular, sans-serif, serif !important;
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+}
+
+.color1 {
+  background-color: @bg-color;
+}
+
+.color2 {
+  background-color: @bg-color2;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  appearance: none !important;
+  margin: 0 !important;
+}
+/* Firefox */
+input[type='number'] {
+  appearance: textfield !important;
+}

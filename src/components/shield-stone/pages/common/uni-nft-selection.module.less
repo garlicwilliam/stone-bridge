@@ -1,0 +1,125 @@
+@import '../../common';
+
+.refresh {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 4px;
+
+  .font(16px, @desc-color);
+  padding: 8px 16px;
+  cursor: pointer;
+
+  .text {
+    .font(14px, @desc-color);
+  }
+
+  &:hover {
+    color: #333333;
+
+    .text {
+      color: #333333;
+    }
+  }
+}
+
+.nftSelect {
+  display: grid;
+  justify-content: center;
+  border-radius: @card-border-radius-small;
+  padding: 16px;
+  min-height: 132px;
+  background-color: @bg-card-color2;
+
+  &.mobile {
+    padding: 16px 0;
+    background-color: transparent;
+  }
+
+  .noData {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: @normal-font-color;
+  }
+}
+
+.optionItem {
+  display: grid;
+  grid-template-columns: 28px 1fr 1fr 1fr 1fr;
+  grid-column-gap: 2px;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid @divider-color;
+
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  &:hover {
+    background-color: @bg-input-color;
+  }
+
+  .op {
+    line-height: 0;
+  }
+
+  .id {
+    font-size: 14px;
+    line-height: 1;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 4px;
+
+    .num {
+      font-size: 12px;
+      color: @desc-color;
+      line-height: 1;
+    }
+    .pair {
+      font-size: 12px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+  }
+
+  .price {
+    display: grid;
+    grid-row-gap: 4px;
+    font-size: 12px;
+    line-height: 1;
+    justify-self: center;
+
+    .title {
+      .font(12px, @desc-color);
+      white-space: nowrap;
+    }
+
+    .value {
+      .font(12px);
+    }
+  }
+
+  .fee {
+    font-size: 12px;
+    line-height: 1;
+    color: @desc-color;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    justify-self: end;
+    grid-row-gap: 4px;
+
+    .title {
+      .font(12px, @desc-color);
+      white-space: nowrap;
+    }
+
+    .value {
+      .font(12px);
+    }
+  }
+}

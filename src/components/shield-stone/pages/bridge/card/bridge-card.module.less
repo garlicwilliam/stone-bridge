@@ -1,0 +1,178 @@
+@import '../../../css/var';
+@import '../../../common';
+
+.wrapperCard {
+  margin: auto;
+  max-width: @main-card-width;
+  background-color: @bg-card-color2;
+  border-radius: @card-border-radius;
+  padding: 30px 30px;
+
+  &.mobile {
+    padding: 16px;
+  }
+
+  .inputBg {
+    padding-bottom: 20px;
+
+    &:not(:global(.stone-input-error)) {
+      background-color: @bg-card-color;
+    }
+
+    &.mobile {
+      padding-bottom: 16px;
+    }
+  }
+
+  .bridgeTo {
+    position: relative;
+    display: flex;
+    justify-self: center;
+    line-height: 0;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 8px solid @bg-card-color2;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+
+    margin: -20px auto -20px auto;
+    z-index: 10;
+  }
+
+  .sendTo {
+    background-color: #ffffff;
+    border-radius: @card-border-radius-small;
+  }
+
+  .selectNet {
+    background-color: #ffffff;
+    padding: 20px 8px 20px 8px;
+    height: 96px;
+    border-radius: @card-border-radius-small;
+    grid-template-columns: 1fr 36px;
+
+    &.mobile {
+      padding: 8px 4px 8px 4px;
+      height: 84px;
+    }
+
+    &:global(.sld-select-disabled) {
+      opacity: 1 !important;
+    }
+
+    :global {
+      .sld-select-title {
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+        font-size: 12px;
+        color: @desc-color;
+      }
+    }
+  }
+
+  .selectReplace {
+    color: @placeholder-color;
+    font-size: 16px;
+
+    &.mobile {
+      font-size: 14px;
+    }
+  }
+
+  .fees {
+    padding: 0 10px;
+    display: grid;
+    grid-row-gap: 16px;
+  }
+}
+
+.optionContent {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  &.mobile {
+    column-gap: 8px;
+  }
+
+  .icon {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 36px;
+      max-height: 36px;
+    }
+
+    &.mobile {
+      width: 28px;
+      height: 28px;
+
+      img {
+        max-width: 28px;
+        max-height: 28px;
+      }
+    }
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 1;
+
+    &.mobile {
+      font-size: 16px;
+    }
+  }
+}
+
+.optionOverlay {
+  background-color: transparent;
+  border-radius: @card-border-radius-small !important;
+
+  &.mobile {
+    :global {
+      .sld-select-dropdown-content {
+        padding: 2px 0;
+
+        .sld-select-dropdown-inner {
+          .sld-select-dropdown-item {
+            height: 64px;
+          }
+        }
+      }
+    }
+  }
+
+  :global {
+    .sld-select-dropdown-content {
+      background-color: #ffffff;
+      border-radius: @card-border-radius-small !important;
+      padding: 2px 0 0 0;
+
+      .sld-select-dropdown-inner {
+        background-color: transparent;
+
+        .sld-select-dropdown-item {
+          height: 64px;
+          border-radius: @card-border-radius-small;
+          margin-bottom: 2px;
+
+          &.sld-select-dropdown-item-active {
+            background-color: @bg-selected-item;
+          }
+        }
+      }
+    }
+  }
+}
+
+.notEnough {
+  color: @highlight-color;
+}

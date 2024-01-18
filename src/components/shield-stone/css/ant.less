@@ -1,0 +1,121 @@
+@import './var';
+
+.ant-message-notice-content {
+  border-radius: @card-border-radius;
+}
+
+.modalRender {
+  .ant-modal-content {
+    border-radius: @card-border-radius;
+
+    .ant-modal-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      right: 10px;
+      top: 10px;
+      border-radius: @card-border-radius-small;
+
+      .ant-modal-close-x {
+        font-size: 20px;
+        color: @desc-color;
+
+        &:hover {
+          color: @normal-font-color;
+        }
+      }
+
+      &:hover {
+        background-color: @bg-card-color2;
+      }
+    }
+
+    .ant-modal-header {
+      border: none;
+      height: 64px;
+      padding: 36px 0 4px;
+      border-top-right-radius: @card-border-radius;
+      border-top-left-radius: @card-border-radius;
+
+      .ant-modal-title {
+        font-size: 24px;
+        line-height: 1;
+        font-weight: normal;
+        text-align: center;
+      }
+    }
+
+    .ant-modal-body {
+      padding: 36px 40px 40px;
+      overflow: auto;
+      max-height: 600px;
+    }
+  }
+}
+
+.drawRender {
+  .ant-drawer-content {
+    border-top-left-radius: @card-border-radius-small;
+    border-top-right-radius: @card-border-radius-small;
+
+    .ant-drawer-wrapper-body {
+      .ant-drawer-header {
+        border-top-left-radius: @card-border-radius-small;
+        border-top-right-radius: @card-border-radius-small;
+        padding: 16px;
+
+        .ant-drawer-header-title {
+          display: flex;
+          flex-direction: row-reverse;
+          .ant-drawer-close {
+            margin-right: -5px;
+          }
+        }
+      }
+
+      .ant-drawer-body {
+        padding: 24px 16px;
+      }
+    }
+  }
+}
+
+.ant-checkbox-wrapper {
+  line-height: 0;
+  border-radius: @card-border-radius-tiny;
+
+  .ant-checkbox {
+    top: 0;
+
+    &:after {
+      border-radius: @card-border-radius-tiny;
+      border-color: @highlight-color;
+    }
+
+    &.ant-checkbox-checked .ant-checkbox-inner {
+      background-color: @highlight-color;
+      border-color: @highlight-color;
+    }
+
+    &:hover .ant-checkbox-inner,
+    .ant-checkbox-input:focus + .ant-checkbox-inner {
+      border: 1px solid @highlight-color !important;
+    }
+
+    .ant-checkbox-inner {
+      position: relative;
+      border-radius: @card-border-radius-tiny;
+      width: 24px;
+      height: 24px;
+
+      // the check sign
+      &::after {
+        width: 8px;
+        height: 12px;
+        left: 5.5px;
+      }
+    }
+  }
+}

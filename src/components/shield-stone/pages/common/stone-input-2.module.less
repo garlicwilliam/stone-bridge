@@ -1,0 +1,67 @@
+@import '../../css/var';
+@import '../../common';
+
+.wrapperInput {
+  background-color: @bg-input-color;
+  border: 2px solid @bg-input-color;
+  border-radius: @card-border-radius-small;
+
+  &.error {
+    background-color: lighten(@warning-color, 30%);
+    border: 2px solid lighten(@warning-color, 20%);
+  }
+
+  &.margin {
+    margin: 0 -16px;
+    padding: 0 8px;
+  }
+
+  :global {
+    .sld_dec_num_input {
+      background-color: transparent !important;
+      height: 40px;
+    }
+
+    .sld_input_prefix {
+    }
+
+    .sld_input {
+      font-size: 20px !important;
+    }
+  }
+
+  .balance {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 8px;
+    justify-content: end;
+    padding: 4px 8px 8px 8px;
+    font-size: 12px !important;
+
+    &.mobile {
+    }
+
+    .balanceLine {
+      font-size: 12px !important;
+      line-height: 1 !important;
+    }
+
+    .tag {
+      border: 1px solid @desc-color;
+      border-radius: @btn-border-radius;
+      padding: 0 8px;
+      cursor: pointer;
+      color: @desc-color;
+
+      &.disabled {
+        color: @desc-color;
+        border-color: @desc-color;
+      }
+
+      &:hover:not(.disabled) {
+        color: lighten(@main-color, 40%);
+        border: 1px solid lighten(@bg-btn-first-color, 40%);
+      }
+    }
+  }
+}

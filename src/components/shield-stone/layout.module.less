@@ -1,0 +1,71 @@
+@import 'css/var';
+@import './common';
+
+.normalBg() {
+  background-image: url('../../assets/imgs/stone/bg3.svg'), url('../../assets/imgs/stone/bg.svg'),
+    url('../../assets/imgs/stone/bg2.svg');
+  background-position: ~'calc(50% - 500px)' 400px, ~'calc(50% + 400px)' 270px, ~'calc(50% - 400px)' 100%;
+  background-size: 700px 240px, 615px 370px, 640px 370px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  max-width: 1440px;
+}
+
+.shortBg() {
+  background-image: url('../../assets/imgs/stone/bg.svg'), url('../../assets/imgs/stone/bg2.svg');
+  background-position: ~'calc(50% + 400px)' 50px, ~'calc(50% - 400px)' 100%;
+  background-size: 615px 370px, 640px 370px;
+  background-repeat: no-repeat, no-repeat;
+  max-width: 1440px;
+}
+
+.stakeBg() {
+  background-image: url('../../assets/imgs/stone/bg-glass.svg'), url('../../assets/imgs/stone/bg-crow.svg'),
+    url('../../assets/imgs/stone/bg3.svg'), url('../../assets/imgs/stone/bg.svg'),
+    url('../../assets/imgs/stone/bg2.svg');
+  background-position: ~'calc(50% - 180px)' 580px, ~'calc(50% + 420px)' 440px, ~'calc(50% - 500px)' 1100px,
+    ~'calc(50% + 415px)' 800px, ~'calc(50% - 400px)' 100%;
+  background-size: 822px 150px, 298px 257px, 700px 240px, 615px 370px, 640px 370px;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  max-width: 1440px;
+}
+
+.layout {
+  min-height: 100vh;
+  padding: 70px 16px 140px 16px;
+  margin: auto;
+
+  &.noBottomPadding {
+    padding-bottom: 0 !important;
+  }
+
+  &.color1 {
+    background-color: @bg-color;
+  }
+
+  &.color2 {
+    background-color: @bg-color2;
+  }
+
+  &.stake {
+    .stakeBg();
+  }
+
+  &.short {
+    .shortBg();
+  }
+
+  &.normal {
+    .normalBg();
+  }
+
+  &.mobile {
+    padding-top: 60px;
+    padding-bottom: 90px;
+    background-image: none;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+
+    &.noBottomPadding {
+      padding-bottom: 0 !important;
+    }
+  }
+}

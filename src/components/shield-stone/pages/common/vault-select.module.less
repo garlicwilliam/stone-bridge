@@ -1,0 +1,73 @@
+@item-height: 56px;
+@selected-item-height: 72px;
+@selected-item-title-height: 12px;
+@selected-item-vault-height: 16px;
+
+@form-border-color: #e7ebf4;
+
+.wrapperVaultSelect {
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid fade(@form-border-color, 30%);
+
+  :global {
+    .sld-select-wrapper {
+      height: 72px;
+    }
+  }
+}
+
+.optionSelectedItem {
+  display: grid;
+  grid-row-gap: 8px;
+
+  .from {
+    display: flex;
+    align-items: center;
+    height: @selected-item-title-height;
+    font-size: @selected-item-title-height;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .vault {
+    height: @selected-item-vault-height;
+    font-size: @selected-item-vault-height;
+    line-height: 1;
+    color: #ffffff;
+  }
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  width: 100%;
+  height: @item-height;
+}
+
+.optionDropdown {
+  display: block;
+
+  :global {
+    .sld-select-dropdown-content {
+      border-radius: 8px;
+      .sld-select-dropdown-inner {
+        border-radius: 8px;
+        .sld-select-dropdown-item {
+          border-radius: 8px;
+          height: @item-height;
+          color: rgba(255, 255, 255, 0.6);
+
+          &.sld-select-dropdown-item-active {
+            color: @staking-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.empty {
+  font-size: 16px;
+}

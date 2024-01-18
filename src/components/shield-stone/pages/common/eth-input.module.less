@@ -1,0 +1,124 @@
+@import '../../css/var';
+
+.wrapperEthInput {
+  width: 100%;
+  border-radius: @card-border-radius-small;
+  background-color: @bg-input-color;
+  padding: 10px 10px 16px 10px;
+
+  &.mobile {
+    padding: 8px 4px 10px 4px;
+  }
+
+  &.error {
+    background-color: fade(@warning-color, 25%);
+  }
+
+  .prefix {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding-right: 16px;
+
+    .icon {
+      display: flex;
+      width: 30px;
+      height: 30px;
+      line-height: 0;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 15px;
+      background-color: #ffffff;
+
+      &.mobile {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .name {
+      font-size: 24px;
+      color: @normal-font-color;
+      line-height: 1;
+
+      &.mobile {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .balance {
+    padding-left: 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+
+    .balanceLabel {
+      font-size: 12px;
+      color: @desc-color;
+      line-height: 1;
+    }
+
+    .balanceValue {
+      color: @desc-color;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .rightAction {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 8px;
+
+      .max {
+        font-size: 12px;
+        line-height: 1;
+        color: @desc-color;
+        cursor: pointer;
+        padding: 4px 8px;
+
+        &:hover {
+          color: darken(@desc-color, 30%);
+        }
+      }
+    }
+  }
+
+  .formInputWrapper {
+    background-color: transparent !important;
+
+    &.mobile {
+      height: 40px;
+    }
+  }
+
+  .formInput {
+    font-size: 24px !important;
+
+    &::placeholder {
+      font-size: 24px !important;
+    }
+
+    &.mobile {
+      font-size: 20px !important;
+
+      &::placeholder {
+        font-size: 20px !important;
+      }
+    }
+  }
+
+  .suffix {
+    font-size: 18px;
+    line-height: 1;
+    color: @desc-color;
+    cursor: pointer;
+    padding-left: 8px;
+
+    &:hover {
+      color: @main-color;
+    }
+  }
+}

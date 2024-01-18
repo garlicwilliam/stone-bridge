@@ -1,0 +1,57 @@
+@import '../../css/var';
+@import '../../common';
+
+.wrapperSwitch {
+  padding-left: 8px;
+  border-radius: 8px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+
+  .iconImg {
+    justify-self: center;
+  }
+}
+
+.activeItem {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+}
+
+.height {
+  height: 40px !important;
+}
+
+.notSupport {
+  color: #ffffff;
+  user-select: none;
+}
+
+.modalDesc {
+  font-size: 14px;
+  line-height: 1.3;
+  color: @desc-color;
+  padding: 8px 0 32px 0;
+}
+.modalBtnTitle {
+  font-size: 18px;
+  line-height: 1;
+  padding-bottom: 16px;
+  text-align: center;
+}
+.modalBtnList {
+  display: grid;
+  grid-row-gap: 16px;
+}
+.modalBtnContent {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  white-space: nowrap;
+}

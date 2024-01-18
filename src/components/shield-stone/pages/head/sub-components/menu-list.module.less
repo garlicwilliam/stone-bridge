@@ -1,0 +1,74 @@
+@import '../../../css/var';
+@import '../../../common';
+
+.menu() {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 1;
+  color: @normal-font-color !important;
+  white-space: nowrap;
+  cursor: pointer;
+  height: 70px;
+  border-top: 4px solid transparent;
+
+  &:hover {
+    color: @main-color !important;
+  }
+
+  &.sld-menu-active {
+    color: @main-color !important;
+    border-top: 4px solid @highlight-color;
+  }
+
+  &.mobile {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid fade(@divider-color, 30%);
+    border-top: none;
+
+    &.sld-menu-active {
+      color: @highlight-color !important;
+      border-bottom: 1px solid @highlight-color;
+    }
+  }
+}
+
+:global {
+  .sld-menu-list-wrapper {
+    .sld-menu-list {
+      column-gap: 16px;
+
+      .sld-menu {
+        .menu();
+      }
+    }
+  }
+  .sld-menu-list-mobile {
+    font-size: 20px;
+    color: @main-color;
+  }
+  .sld-menu-list-mobile-overlay-content,
+  .sld-menu-list-ellipsis-overlay-content {
+    width: 220px;
+    background-color: @bg-card-color;
+    border-radius: @card-border-radius-small !important;
+    overflow: hidden;
+    box-shadow: 0 0 5px 2px #dfdfdf;
+
+    .sld-menu {
+      .menu();
+    }
+  }
+}
+
+.outArrow {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+  transform: rotate(-45deg);
+}

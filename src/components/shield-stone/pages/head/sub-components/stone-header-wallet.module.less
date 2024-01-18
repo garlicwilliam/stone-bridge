@@ -1,0 +1,90 @@
+@import '../../../css/var';
+
+.wrapperWallet {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  grid-column-gap: 8px;
+}
+
+.walletAddress {
+  border-radius: 30px !important;
+
+  &.color1 {
+    background-color: #ffffff !important;
+    color: #8b8b8b !important;
+  }
+
+  &.color2 {
+    background-color: #f2f4f6 !important;
+    color: #8b8b8b !important;
+  }
+}
+
+// -----------------------------------------------
+// for network switch component
+
+.networkSwitch {
+  border-radius: 30px !important;
+
+  &.color1 {
+    background-color: #ffffff !important;
+  }
+
+  &.color2 {
+    background-color: #f2f4f6 !important;
+  }
+
+  :global {
+    .network_not_support {
+      color: @normal-font-color;
+    }
+  }
+}
+
+.networkSelect {
+  border-radius: 30px !important;
+  grid-template-columns: 1fr 30px !important;
+
+  &.color1 {
+    background-color: #ffffff !important;
+  }
+
+  &.color2 {
+    background-color: #f2f4f6 !important;
+  }
+
+  :global {
+    .sld-select-icon {
+      color: silver;
+      padding-right: 12px;
+    }
+  }
+}
+
+.networkSelectDropdown {
+  display: block;
+  border-radius: @card-border-radius-small !important;
+
+  :global {
+    .sld-select-dropdown-content {
+      border-radius: @card-border-radius-small !important;
+
+      .sld-select-dropdown-item {
+        border-radius: @card-border-radius-small !important;
+      }
+
+      .sld-select-dropdown-item-active {
+        background-color: @bg-selected-item !important;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------
+
+.connectWallet {
+  background-color: @bg-btn-first-color;
+  border-radius: @btn-border-radius !important;
+  cursor: pointer;
+}

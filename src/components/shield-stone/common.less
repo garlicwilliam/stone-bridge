@@ -1,0 +1,260 @@
+@import 'css/var';
+@import 'css/mixin';
+
+@height: 50px;
+@height-mobile: 40px;
+
+.offsetTabCard {
+  display: grid !important;
+  grid-row-gap: 40px;
+}
+
+.tabs {
+  height: @height;
+  justify-content: center;
+  justify-self: center;
+  white-space: nowrap;
+  background-color: @bg-btn-second-color;
+  border-radius: @btn-border-radius;
+
+  &.mobile {
+    height: @height-mobile;
+
+    :global {
+      .sld_tab_item {
+        font-size: 16px;
+        padding: 0 16px;
+      }
+    }
+  }
+
+  :global {
+    .sld_tab_item {
+      background-color: @bg-btn-second-color;
+      justify-content: center;
+      font-size: 18px;
+      color: #666666;
+    }
+
+    .sld_tab_item_active {
+      background-color: @main-color;
+      color: @front-color;
+      border-radius: @btn-border-radius;
+    }
+
+    .sld_tab_item_first {
+      border-top-left-radius: @btn-border-radius;
+      border-bottom-left-radius: @btn-border-radius;
+    }
+
+    .sld_tab_item_last {
+      border-top-right-radius: @btn-border-radius;
+      border-bottom-right-radius: @btn-border-radius;
+    }
+  }
+}
+
+// --------------------
+
+.normalTabCard {
+  &.color2 {
+    :global {
+      .sld_tab_content {
+        background-color: @bg-card-color2 !important;
+      }
+    }
+  }
+
+  :global {
+    .sld_tab_content {
+      border-radius: @card-border-radius;
+    }
+  }
+}
+
+.subTabs {
+  &.mobile {
+    :global {
+      .sld_tab_item {
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  &.color2 {
+    :global {
+      .sld_tab_item_active {
+        background-color: @bg-card-color2 !important;
+      }
+    }
+  }
+
+  :global {
+    .sld_tab_item {
+      justify-content: center;
+      font-size: 18px !important;
+      color: @desc-color;
+    }
+
+    .sld_tab_item_first {
+      border-top-left-radius: @card-border-radius !important;
+    }
+
+    .sld_tab_item_last {
+      border-top-right-radius: @card-border-radius !important;
+    }
+
+    .sld_tab_item_active {
+      color: @main-color;
+    }
+  }
+}
+
+// --------------------
+
+.lightTabs {
+  border-bottom: 1px solid #d2d2d2 !important;
+
+  &.mobile {
+    :global {
+      .sld_tab_item {
+        font-size: 14px !important;
+        border-bottom: 4px solid transparent !important;
+      }
+
+      .sld_tab_item_active {
+        color: @main-color;
+        border-bottom-color: @main-color !important;
+        border-bottom-width: 4px !important;
+      }
+    }
+  }
+
+  :global {
+    .sld_tab_item {
+      font-size: 16px !important;
+      border-bottom: 4px solid transparent !important;
+    }
+
+    .sld_tab_item_active {
+      color: @main-color;
+      border-bottom-color: @main-color !important;
+      border-bottom-width: 4px !important;
+    }
+  }
+}
+
+.switchTabs {
+  justify-content: start;
+  border-radius: @btn-border-radius;
+  height: 40px;
+  border: 1px solid #d2d2d2;
+  width: 300px !important;
+  margin-bottom: 30px;
+  padding: 2px;
+
+  &.mobile {
+    width: auto !important;
+    margin-bottom: 20px;
+  }
+
+  :global {
+    .sld_tab_item {
+      display: flex;
+      font-size: 14px;
+      line-height: 1;
+      border-radius: @btn-border-radius;
+      width: 50%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color: @desc-color;
+    }
+
+    .sld_tab_item_active {
+      background-color: @bg-btn-first-color;
+      color: @front-color;
+    }
+  }
+}
+
+// --------------------
+
+.btn {
+  .button();
+}
+
+.btnDefault {
+  .button-default();
+}
+
+.label {
+  font-size: 14px;
+  line-height: 1;
+  color: @desc-color;
+
+  &.mobile {
+    font-size: 12px;
+  }
+}
+
+.value {
+  font-size: 14px;
+  line-height: 1;
+
+  &.mobile {
+    font-size: 12px;
+  }
+}
+
+.horizon {
+  align-items: center;
+  align-content: center;
+}
+
+// --------------------
+
+.paramMinx() {
+  border-radius: @card-border-radius-small;
+  display: grid;
+  width: 100%;
+
+  padding: 20px;
+  grid-row-gap: 16px;
+
+  &.mobile {
+    padding: 16px 12px;
+    grid-row-gap: 12px;
+  }
+}
+
+.param {
+  background-color: @bg-input-color;
+  .paramMinx();
+}
+
+.paramLight {
+  background-color: @bg-card-color;
+  .paramMinx();
+}
+
+.highlightColor {
+  color: @highlight-color;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.inputErrorColor() {
+  background-color: lighten(@warning-color, 30%);
+  border: 2px solid lighten(@warning-color, 20%);
+}
+
+.pageTopPadding() {
+  padding-top: 80px;
+
+  &.mobile {
+    padding-top: 50px;
+  }
+}

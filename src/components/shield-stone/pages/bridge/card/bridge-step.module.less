@@ -1,0 +1,241 @@
+@import '../../../css/var';
+@import '../../../common';
+
+@size: 54px;
+@size-mobile: 26px;
+
+@icon-out: 88px;
+@icon: 60px;
+
+@iconImg: 26px;
+@icon-mobile: 48px;
+@iconImg-mobile: 20px;
+
+.wrapperStep {
+  margin: auto;
+  max-width: @main-card-width;
+  background-color: @bg-card-color2;
+  border-radius: @card-border-radius;
+  padding: 40px 30px;
+
+  &.mobile {
+    padding: 16px;
+  }
+
+  .amount {
+    display: flex;
+    font-size: 16px;
+    line-height: 1;
+    padding-bottom: 60px;
+    justify-content: center;
+
+    &.mobile {
+      font-size: 18px;
+    }
+  }
+
+  .steps {
+    display: grid;
+    width: 100%;
+    grid-template-columns: @icon-out @icon @icon-out;
+    grid-row-gap: 50px;
+    grid-column-gap: 60px;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    &.mobile {
+      grid-row-gap: 36px;
+    }
+
+    .netIconPending {
+      width: @icon-out;
+      height: @icon-out;
+      display: flex;
+    }
+
+    .net {
+      position: relative;
+      width: @icon-out;
+      height: @icon-out;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+
+      .netIcon {
+        width: @size;
+        height: @size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: @size;
+          max-height: @size;
+        }
+
+        &.mobile {
+          width: @size-mobile;
+          height: @size-mobile;
+
+          img {
+            max-width: @size-mobile;
+            max-height: @size-mobile;
+          }
+        }
+      }
+
+      .doneSign {
+        position: absolute;
+        display: flex;
+        background-color: #15b384;
+        width: 36px;
+        height: 16px;
+        border-radius: 8px;
+        bottom: -4px;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 12px;
+      }
+
+      .switchNetSign {
+        position: absolute;
+        display: flex;
+        background-color: @highlight-color;
+        width: 36px;
+        height: 16px;
+        border-radius: 8px;
+        bottom: -4px;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 12px;
+      }
+
+      .switchNetwork {
+        position: absolute;
+        display: flex;
+        bottom: -36px;
+
+        background-color: fade(@bg-card-color, 50%);
+        white-space: nowrap;
+        font-size: 12px;
+        line-height: 1;
+        padding: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        color: @desc-color;
+
+        &:hover {
+          color: @normal-font-color;
+        }
+      }
+
+      .pendingState {
+        position: absolute;
+        display: flex;
+        bottom: -36px;
+
+        white-space: nowrap;
+        font-size: 12px;
+        line-height: 1;
+        padding: 8px;
+        border-radius: 8px;
+
+        color: @desc-color;
+      }
+    }
+
+    .arrowIcon {
+      width: @icon;
+      height: @icon;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #000000;
+
+      img {
+        max-width: @iconImg;
+        max-height: @iconImg;
+        width: @iconImg;
+        transform: rotate(-90deg);
+      }
+
+      &.mobile {
+        width: @icon-mobile;
+        height: @icon-mobile;
+
+        img {
+          max-width: @iconImg-mobile;
+          max-height: @iconImg-mobile;
+          width: @iconImg-mobile;
+        }
+      }
+    }
+  }
+
+  .action {
+    margin-top: 60px;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid #dddddd;
+  width: @icon-out;
+  height: @icon-out;
+
+  &.idle {
+    border: 6px solid #dddddd;
+  }
+
+  &.pending {
+    border-top: 6px solid @main-color;
+    border-left: 6px solid #dddddd;
+    border-right: 6px solid #dddddd;
+    border-bottom: 6px solid #dddddd;
+
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+
+  &.finished {
+    border: 6px solid @main-color;
+  }
+
+  &.error {
+    border: 6px solid @warning-color;
+  }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

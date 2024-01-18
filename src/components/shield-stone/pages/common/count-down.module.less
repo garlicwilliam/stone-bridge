@@ -1,0 +1,114 @@
+@import '../../css/var';
+@import '../../common';
+
+@card-size: 48px;
+@card-size-mobile: 32px;
+@card-font: 24px;
+@card-font-mobile: 16px;
+@sep-size: 5px;
+@sep-size-mobile: 3px;
+@gap: 10px;
+@gap-mobile: 8px;
+@gap-row: 6px;
+@desc-font: 12px;
+
+.wrapperCountdown {
+  display: grid;
+  grid-template-columns: repeat(4, @card-size);
+  grid-column-gap: @gap;
+  justify-content: center;
+
+  &.useSeparator {
+    grid-template-columns: repeat(4, @card-size auto);
+
+    &.mobile {
+      grid-template-columns: repeat(4, @card-size-mobile auto);
+    }
+  }
+
+  &.mobile {
+    grid-column-gap: @gap-mobile;
+    grid-template-columns: repeat(4, @card-size-mobile);
+  }
+
+  .card {
+    display: grid;
+    grid-row-gap: @gap-row;
+
+    .num {
+      width: @card-size;
+      height: @card-size;
+      background-color: @bg-btn-first-color;
+
+      color: @front-color;
+      border-radius: @card-border-radius-tiny;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      font-size: @card-font;
+
+      user-select: none;
+
+      &.mobile {
+        width: @card-size-mobile;
+        height: @card-size-mobile;
+        font-size: @card-font-mobile;
+      }
+    }
+
+    .name {
+      display: flex;
+      line-height: 1;
+      font-size: 12px;
+      color: @desc-color;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .sep {
+    display: grid;
+    grid-row-gap: @gap-row;
+
+    .sign {
+      display: grid;
+      grid-template-columns: 1fr;
+      height: @card-size;
+      width: @sep-size;
+      align-items: center;
+      align-content: center;
+      justify-items: center;
+      justify-content: center;
+      line-height: 0;
+      grid-row-gap: 6px;
+
+      &.mobile {
+        height: @card-size-mobile;
+        width: @sep-size-mobile;
+        grid-row-gap: 4px;
+      }
+
+      .point {
+        width: @sep-size;
+        height: @sep-size;
+        line-height: 0;
+        background-color: @main-color;
+        border-radius: 50%;
+
+        &.mobile {
+          width: @sep-size-mobile;
+          height: @sep-size-mobile;
+        }
+      }
+    }
+
+    .empty {
+      display: flex;
+      align-items: center;
+      height: @desc-font;
+      line-height: 1;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../css/var';
+
+.wrapperCount {
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+
+  .oneCard {
+    display: grid;
+    grid-template-columns: 28px 18px;
+
+    .card {
+      display: flex;
+      width: 28px;
+      height: 28px;
+      border-radius: @border-radius * 2;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1;
+      border: 1px solid #dbdbdb;
+    }
+
+    .unit {
+      display: flex;
+      font-size: 14px;
+      line-height: 1;
+      align-items: center;
+      justify-content: center;
+      color: @desc-color;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../../css/var';
+@import '../../../common';
+
+.wrapperDeposit {
+  margin: auto;
+  background-color: @bg-card-color2;
+  padding: 30px 30px;
+  border-radius: @card-border-radius;
+  max-width: @main-card-width;
+
+  display: grid;
+  grid-row-gap: 20px;
+
+  &.mobile {
+    padding: 16px;
+    grid-row-gap: 16px;
+  }
+
+  .inputBg {
+    padding-bottom: 20px;
+
+    &:not(:global(.stone-input-error)) {
+      background-color: @bg-card-color;
+    }
+
+    &.mobile {
+      padding-bottom: 16px;
+    }
+  }
+}

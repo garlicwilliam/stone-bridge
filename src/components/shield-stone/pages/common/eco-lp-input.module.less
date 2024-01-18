@@ -1,0 +1,84 @@
+@import '../../css/var';
+
+.wrapperLpInput {
+  background-color: @bg-input-color2;
+  border-radius: @card-border-radius-small;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+    'a b'
+    'c c';
+  grid-row-gap: 12px;
+
+  &.mobile {
+    padding: 10px 12px;
+    grid-template-columns: 50% 50%;
+  }
+
+  &.error {
+    background-color: fade(@warning-color, 25%);
+  }
+
+  .input {
+    grid-area: a;
+
+    .formInputWrapper {
+      background-color: transparent !important;
+      height: 40px;
+    }
+
+    .formInput {
+      font-size: 24px;
+      padding-left: 0 !important;
+      background-color: transparent !important;
+
+      &::placeholder {
+        font-size: 24px !important;
+      }
+
+      &.mobile {
+        font-size: 20px !important;
+
+        &::placeholder {
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+
+  .select {
+    grid-area: b;
+
+    .emptyOption {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow-x: hidden;
+    }
+
+    .formSelect {
+      background-color: @main-color;
+      color: @front-color;
+      height: 40px;
+      grid-template-columns: 1fr 30px;
+      border-radius: @btn-border-radius;
+      padding: 0 8px;
+    }
+  }
+
+  .available {
+    grid-area: c;
+    font-size: 12px;
+    line-height: 1;
+    color: @desc-color;
+  }
+
+  .maxNum {
+    cursor: pointer;
+    color: @highlight-color;
+
+    &:hover {
+      color: fade(@highlight-color, 90%);
+    }
+  }
+}
